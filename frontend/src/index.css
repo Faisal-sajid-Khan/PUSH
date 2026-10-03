@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --ease: cubic-bezier(0.22, 1, 0.36, 1); }
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { 
+    font-family: "Neue Haas Grotesk Display Pro", "Neue Haas Grotesk Display Pro 55 Roman", sans-serif;
+    @apply bg-push-black text-push-white antialiased; 
+  }
+  ::selection { @apply bg-push-olive text-push-white; }
+  :focus-visible { outline: 2px solid #5C6E2E; outline-offset: 4px; }
+}
+
+@layer components {
+  .push-reveal { opacity: 0; transform: translateY(32px); transition: opacity .9s var(--ease), transform .9s var(--ease); transition-delay: var(--d, 0ms); }
+  .push-reveal--in { opacity: 1; transform: none; }
+  /* Updated to match exact spec: font-weight 400, line-height 0.8 (137/171) */
+  .push-display { @apply font-normal leading-[0.8] tracking-[-0.04em]; }
+  .push-label { @apply text-[11px] font-bold uppercase tracking-label; }
+  .push-tagline { @apply font-bold italic; }
+  .push-link { @apply relative inline-block; }
+  .push-link::after { content: ''; @apply absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-500; }
+  .push-link:hover::after { @apply scale-x-100; }
+  .push-menu__item { transform: translateY(40px); opacity: 0; transition: transform .8s var(--ease), opacity .8s var(--ease); }
+  .push-menu--open .push-menu__item { transform: none; opacity: 1; }
+  .push-marquee__track { animation: push-marquee 28s linear infinite; }
+}
+
+@keyframes push-marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .push-reveal { opacity: 1; transform: none; transition: none; }
+  .push-marquee__track { animation: none; }
+  * { transition-duration: .01ms !important; }
+}

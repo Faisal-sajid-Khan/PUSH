@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MotionCapture Animation</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .card {
+    position: relative;
+    width: 1351px;
+    height: 576.890625px;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+  }
+  
+  .node-0 {
+    position: absolute;
+    left: 681px;
+    top: 147px;
+    width: 128px;
+    height: 17px;
+    color: rgba(165, 157, 146, 1);
+    font-family: BentonSans, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .node-1 {
+    position: absolute;
+    left: 681px;
+    top: 165px;
+    width: 294px;
+    height: 30px;
+    color: rgba(7, 7, 7, 1);
+    font-family: BentonSans, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  .node-2 {
+    position: absolute;
+    left: 680.5px;
+    top: 147.59375px;
+    width: 304.5625px;
+    height: 50.390625px;
+  }
+
+  @keyframes anim-node-2 {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .node-2 {
+    animation: anim-node-2 1250ms ease 500ms both;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="node-0">Meet the islanders</div>
+    <div class="node-1">Every awesome thing you see exists because someone like you decided to make it.</div>
+    <div class="node-2"></div>
+  </div>
+</body>
+</html>
