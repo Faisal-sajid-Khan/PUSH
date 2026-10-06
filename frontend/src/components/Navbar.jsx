@@ -72,18 +72,21 @@ export default function Navbar() {
           >
             {(!isInitialLoad || logoReady) && (
               <>
-                <motion.img 
-                  layoutId="nav-logo"
-                  src={pushLogo} 
-                  alt="PUSH" 
-                  className="h-16 md:h-20 w-auto group-hover:opacity-0 transition-opacity duration-300 relative z-10" 
-                  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-                />
+                <div className="group-hover:opacity-0 transition-opacity duration-150 relative z-10">
+                  <motion.img 
+                    layoutId="nav-logo"
+                    src={pushLogo} 
+                    alt="PUSH" 
+                    className="h-16 md:h-20 w-auto" 
+                    transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                  />
+                </div>
                 <video 
                   src={loaderVid} 
                   muted 
-                  playsInline 
-                  className="absolute left-0 top-0 h-16 md:h-20 w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 scale-[1.15]"
+                  playsInline
+                  loop 
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550%] w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 max-w-none"
                 />
               </>
             )}
