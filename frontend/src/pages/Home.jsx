@@ -53,32 +53,16 @@ export default function Home() {
   return (
     <>
       <section className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden px-5 pb-16 md:px-10 bg-push-black">
-        {/* Background & Masked Foreground Videos */}
-        <div className="absolute inset-0 z-0 bg-push-black overflow-hidden flex justify-center">
-          {/* Blurred Background to cover full width */}
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0 bg-push-black overflow-hidden">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-50 scale-125"
+            className="absolute top-0 left-0 w-full h-full object-cover opacity-80"
             src={heroVideo}
           />
-          
-          {/* Crisp Foreground Video with feathered edges */}
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative h-full aspect-[9/16] object-cover max-w-full"
-            style={{
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
-              maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
-            }}
-            src={heroVideo}
-          />
-
           {/* Subtle gradient overlay to ensure text remains readable */}
           <div className="absolute inset-0 bg-gradient-to-t from-push-black/90 via-push-black/20 to-transparent pointer-events-none" />
         </div>

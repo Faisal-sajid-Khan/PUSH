@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import pushLogo from '../assets/PUSH_logo_symbol_white.png';
+import loaderVid from '../assets/PUSH_vid_loder_start.mp4';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -53,15 +54,38 @@ export default function Navbar() {
 
       <header className="fixed inset-x-0 top-0 z-40 flex items-center justify-between px-5 py-4 mix-blend-difference md:px-10 text-push-white">
         <div className="flex-1 flex items-center h-16 md:h-20">
-          <Link to="/" aria-label="PUSH home" className="flex items-center">
+          <Link 
+            to="/" 
+            aria-label="PUSH home" 
+            className="flex items-center relative group"
+            onMouseEnter={(e) => {
+              const vid = e.currentTarget.querySelector('video');
+              if (vid) {
+                vid.currentTime = 0;
+                vid.play().catch(() => {}); // Catch play promise errors
+              }
+            }}
+            onMouseLeave={(e) => {
+              const vid = e.currentTarget.querySelector('video');
+              if (vid) vid.pause();
+            }}
+          >
             {(!isInitialLoad || logoReady) && (
-              <motion.img 
-                layoutId="nav-logo"
-                src={pushLogo} 
-                alt="PUSH" 
-                className="h-16 md:h-20 w-auto" 
-                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-              />
+              <>
+                <motion.img 
+                  layoutId="nav-logo"
+                  src={pushLogo} 
+                  alt="PUSH" 
+                  className="h-16 md:h-20 w-auto group-hover:opacity-0 transition-opacity duration-300 relative z-10" 
+                  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                />
+                <video 
+                  src={loaderVid} 
+                  muted 
+                  playsInline 
+                  className="absolute left-0 top-0 h-16 md:h-20 w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 scale-[1.15]"
+                />
+              </>
             )}
           </Link>
         </div>
