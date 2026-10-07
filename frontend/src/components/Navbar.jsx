@@ -85,8 +85,7 @@ export default function Navbar() {
                   src={loaderVid} 
                   muted 
                   playsInline
-                  loop 
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550%] w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 max-w-none"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450%] w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 max-w-none"
                 />
               </>
             )}

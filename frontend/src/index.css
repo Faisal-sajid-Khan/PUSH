@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro 55 Roman";
+  src: url('./assets/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url('./assets/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url('./assets/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root { --ease: cubic-bezier(0.22, 1, 0.36, 1); }
 
 @layer base {
