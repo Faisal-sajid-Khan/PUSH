@@ -28,7 +28,7 @@ export default function Approach() {
   const videoRef = useRef(null);
 
   const { scrollY } = useScroll();
-  const videoBlur = useTransform(scrollY, [0, window.innerHeight / 2], ["blur(0px)", "blur(24px)"]);
+  const blurOpacity = useTransform(scrollY, [0, window.innerHeight / 2], [0, 1]);
 
   useEffect(() => {
     // Navigating between pages skips preloader
@@ -55,11 +55,8 @@ export default function Approach() {
 
   return (
     <div className="relative w-full">
-      {/* Sticky Fullscreen Background Video with Scroll Blur */}
-      <motion.div 
-        className="sticky top-0 left-0 w-full h-[100svh] z-0 overflow-hidden pointer-events-none"
-        style={{ filter: videoBlur }}
-      >
+      {/* Sticky Fullscreen Background Video with Optimized Scroll Blur */}
+      <div className="sticky top-0 left-0 w-full h-[100svh] z-0 overflow-hidden pointer-events-none">
         <video
           ref={videoRef}
           autoPlay
@@ -71,7 +68,13 @@ export default function Approach() {
         />
         {/* Subtle gradient overlay to ensure text remains readable */}
         <div className="absolute inset-0 bg-gradient-to-t from-push-black/90 via-push-black/50 to-push-black/30" />
-      </motion.div>
+        
+        {/* Hardware-accelerated blur layer */}
+        <motion.div 
+          className="absolute inset-0 backdrop-blur-2xl bg-push-black/10"
+          style={{ opacity: blurOpacity, willChange: 'opacity' }}
+        />
+      </div>
 
       <section className="relative z-10 flex min-h-[100svh] flex-col justify-end px-5 pb-16 pt-32 md:px-10 bg-transparent -mt-[100svh]">
         <WordPullUp 

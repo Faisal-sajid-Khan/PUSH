@@ -7,6 +7,8 @@ import Home from './pages/Home.jsx';
 import Approach from './pages/Approach.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import TermsAndConditions from './pages/TermsAndConditions.jsx';
 import PageTransition from './components/PageTransition.jsx';
 
 export default function App() {
@@ -23,6 +25,8 @@ export default function App() {
             <Route path="/approach" element={<PageTransition><Approach /></PageTransition>} />
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+            <Route path="/privacy-policy" element={<PageTransition><PrivacyPolicy /></PageTransition>} />
+            <Route path="/terms-and-conditions" element={<PageTransition><TermsAndConditions /></PageTransition>} />
             <Route path="*" element={<PageTransition><Home /></PageTransition>} />
           </Routes>
         </AnimatePresence>

@@ -78,6 +78,7 @@ export default function Navbar() {
                     src={pushLogo} 
                     alt="PUSH" 
                     className="h-16 md:h-20 w-auto" 
+                    style={{ willChange: 'transform' }}
                     transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   />
                 </div>
@@ -85,7 +86,8 @@ export default function Navbar() {
                   src={loaderVid} 
                   muted 
                   playsInline
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450%] w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 max-w-none"
+                  style={{ willChange: 'opacity, transform', transform: 'translate(-50%, -50%) translateZ(0)' }}
+                  className="absolute top-1/2 left-1/2 h-[450%] w-auto object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0 max-w-none"
                 />
               </>
             )}

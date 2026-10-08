@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function Reveal({ as: Tag = 'div', delay = 0, className = '', children }) {
+export default function Reveal({ as: Tag = 'div', delay = 0, className = '', children, ...props }) {
   const ref = useRef(null);
   useEffect(() => {
     const el = ref.current;
@@ -10,5 +10,5 @@ export default function Reveal({ as: Tag = 'div', delay = 0, className = '', chi
     io.observe(el);
     return () => io.disconnect();
   }, []);
-  return <Tag ref={ref} style={{ '--d': `${delay}ms` }} className={`push-reveal ${className}`}>{children}</Tag>;
+  return <Tag ref={ref} style={{ '--d': `${delay}ms` }} className={`push-reveal ${className}`} {...props}>{children}</Tag>;
 }

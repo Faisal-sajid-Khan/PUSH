@@ -23,8 +23,8 @@ export default function Footer() {
   ];
 
   const legalLinks = [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms-and-conditions", label: "Terms & Conditions" },
   ];
 
   return (
