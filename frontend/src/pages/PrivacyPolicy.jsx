@@ -117,6 +117,7 @@ export default function PrivacyPolicy() {
                 <p className="font-bold text-push-black mt-6">Business details:</p>
                 <ul className="space-y-1">
                   <li><strong>Business Name:</strong> PUSH Branding Studio</li>
+                  <li><strong>Location:</strong> Maharashtra, India</li>
                 </ul>
               </div>
             </Reveal>
