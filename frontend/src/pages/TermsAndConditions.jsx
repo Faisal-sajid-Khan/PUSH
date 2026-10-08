@@ -71,7 +71,7 @@ export default function TermsAndConditions() {
           <p className="max-w-2xl text-lg md:text-xl text-push-white/80">
             The terms that govern your use of the PUSH Branding Studio website.
           </p>
-          <p className="mt-4 text-sm text-push-mid">Last Updated: [Insert Date]</p>
+          <p className="mt-4 text-sm text-push-mid">Last Updated: October 2026</p>
         </Reveal>
       </section>
 
@@ -240,8 +240,8 @@ export default function TermsAndConditions() {
             <Reveal id="governing-law" className="scroll-mt-32">
               <h2 className="push-display text-3xl md:text-5xl mb-6">17. Governing Law</h2>
               <div className="space-y-4 text-push-charcoal/80 leading-relaxed font-sans text-lg">
-                <p><strong>Governing Law:</strong> [Insert Country/State]</p>
-                <p><strong>Jurisdiction:</strong> [Insert Courts/Jurisdiction]</p>
+                <p><strong>Governing Law:</strong> Maharashtra, India</p>
+                <p><strong>Jurisdiction:</strong> Maharashtra, India</p>
               </div>
             </Reveal>
 
@@ -262,13 +262,8 @@ export default function TermsAndConditions() {
             <Reveal id="contact" className="scroll-mt-32">
               <h2 className="push-display text-3xl md:text-5xl mb-6">20. Contact Us</h2>
               <div className="space-y-4 text-push-charcoal/80 leading-relaxed font-sans text-lg">
-                <p>If you have any questions or concerns about these Terms, please contact us:</p>
+                <p>If you have any questions or concerns about these Terms, please reach out to us via our <a href="/#/contact" className="underline hover:text-push-black">Contact page</a>.</p>
                 <p><strong>PUSH Branding Studio</strong></p>
-                <ul className="space-y-1">
-                  <li><strong>Email:</strong> [Insert Email Address]</li>
-                  <li><strong>Address:</strong> [Insert Business Address]</li>
-                  <li><strong>Website:</strong> [Insert Website URL]</li>
-                </ul>
               </div>
             </Reveal>
 

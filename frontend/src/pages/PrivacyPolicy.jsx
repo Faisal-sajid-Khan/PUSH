@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
           <p className="max-w-2xl text-lg md:text-xl text-push-white/80">
             Your privacy matters to us. Here’s how PUSH collects, uses, and protects your information.
           </p>
-          <p className="mt-4 text-sm text-push-mid">Last Updated: [Insert Date]</p>
+          <p className="mt-4 text-sm text-push-mid">Last Updated: October 2026</p>
         </Reveal>
       </section>
 
@@ -117,9 +117,6 @@ export default function PrivacyPolicy() {
                 <p className="font-bold text-push-black mt-6">Business details:</p>
                 <ul className="space-y-1">
                   <li><strong>Business Name:</strong> PUSH Branding Studio</li>
-                  <li><strong>Website:</strong> [Insert Website URL]</li>
-                  <li><strong>Email:</strong> [Insert Email Address]</li>
-                  <li><strong>Business Address:</strong> [Insert Business Address]</li>
                 </ul>
               </div>
             </Reveal>
@@ -220,7 +217,7 @@ export default function PrivacyPolicy() {
                   <li>Opting out of marketing communications</li>
                   <li>The right to complain to a data protection authority</li>
                 </ul>
-                <p>To exercise any of these rights, please contact us at: <br/><strong>[Insert Email Address]</strong></p>
+                <p>To exercise any of these rights, please contact us through our website's <a href="/#/contact" className="underline hover:text-push-black">Contact page</a>.</p>
               </div>
             </Reveal>
 
@@ -269,13 +266,8 @@ export default function PrivacyPolicy() {
             <Reveal id="contact" className="scroll-mt-32">
               <h2 className="push-display text-3xl md:text-5xl mb-6">15. Contact Us</h2>
               <div className="space-y-4 text-push-charcoal/80 leading-relaxed font-sans text-lg">
-                <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+                <p>If you have any questions or concerns about this Privacy Policy, please reach out to us via our <a href="/#/contact" className="underline hover:text-push-black">Contact page</a>.</p>
                 <p><strong>PUSH Branding Studio</strong></p>
-                <ul className="space-y-1">
-                  <li><strong>Email:</strong> [Insert Email Address]</li>
-                  <li><strong>Address:</strong> [Insert Business Address]</li>
-                  <li><strong>Website:</strong> [Insert Website URL]</li>
-                </ul>
               </div>
             </Reveal>
             
