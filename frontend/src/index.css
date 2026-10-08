@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Neue Haas Grotesk Display Pro 55 Roman";
-  src: url('./assets/NeueHaasDisplayBold.ttf') format('truetype');
+  src: url('./assets/NeueHaasGrotText-55Roman-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "Neue Haas Grotesk Display Pro";
-  src: url('./assets/NeueHaasDisplayBold.ttf') format('truetype');
+  src: url('./assets/NeueHaasGrotText-55Roman-Trial.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -31,7 +31,6 @@
 @layer base {
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { 
-    font-family: "Neue Haas Grotesk Display Pro", "Neue Haas Grotesk Display Pro 55 Roman", sans-serif;
     @apply bg-push-black text-push-white antialiased; 
   }
   ::selection { @apply bg-push-olive text-push-white; }
