@@ -1,6 +1,7 @@
 import Reveal from '../components/Reveal.jsx';
 import WordPullUp from '../components/WordPullUp.jsx';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TermsAndConditions() {
   const [ready, setReady] = useState(false);
@@ -262,7 +263,7 @@ export default function TermsAndConditions() {
             <Reveal id="contact" className="scroll-mt-32">
               <h2 className="push-display text-3xl md:text-5xl mb-6">20. Contact Us</h2>
               <div className="space-y-4 text-push-charcoal/80 leading-relaxed font-sans text-lg">
-                <p>If you have any questions or concerns about these Terms, please reach out to us via our <a href="/#/contact" className="underline hover:text-push-black">Contact page</a>.</p>
+                <p>If you have any questions or concerns about these Terms, please reach out to us via our <Link to="/contact" className="underline hover:text-push-black">Contact page</Link>.</p>
                 <p><strong>PUSH Branding Studio</strong></p>
               </div>
             </Reveal>
